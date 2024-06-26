@@ -1,11 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
-group = 'kr.butterpl.bplib'
+group = 'kr.butterpl'
 version = '1.0'
-
-sourceCompatibility = 21
-targetCompatibility = 21
 
 repositories {
     mavenCentral()
@@ -37,6 +34,9 @@ java {
 publishing {
     publications {
         maven(MavenPublication) {
+            groupId 'kr.butterpl'
+            artifactId 'bplib'
+            version '1.0.0'
             from components.java
         }
     }
