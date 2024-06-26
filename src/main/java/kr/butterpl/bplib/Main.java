@@ -1,6 +1,6 @@
 package kr.butterpl.bplib;
 
-import com.butterpl.bplib.nms.version.VersionController;
+import kr.butterpl.bplib.nms.version.VersionController;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
