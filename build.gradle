@@ -38,15 +38,17 @@ java {
 }
 
 publishing {
-    repositories {
-        maven {
-            url = uri("https://github.com/pang-dang/BPLib")
-        }
-    }
     publications {
-        maven(MavenPublication) {
+        mavenJava(MavenPublication) {
+            groupId = "kr.butterpl.bplib"
+            artifactId = "BPLib"
+            version = "${project.version}"
+
             from components.java
         }
+    }
+    repositories {
+        mavenLocal()
     }
 }
 
@@ -54,3 +56,5 @@ wrapper {
     gradleVersion = "8.5"
     distributionType = Wrapper.DistributionType.ALL
 }
+
+build.dependsOn publishToMavenLocal
