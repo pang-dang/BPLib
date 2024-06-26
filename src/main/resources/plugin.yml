@@ -1,5 +1,5 @@
 name: BPLib
 author: ButterPL
-version: '${version}'
+version: '1.0'
 main: kr.butterpl.bplib.Main
 api-version: '1.20'
