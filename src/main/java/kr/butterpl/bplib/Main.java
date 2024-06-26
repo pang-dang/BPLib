@@ -12,13 +12,6 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-
         VersionController.initialize(this);
-
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
     }
 }
