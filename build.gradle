@@ -4,6 +4,9 @@ apply plugin: 'maven-publish'
 group = 'kr.butterpl.bplib'
 version = '1.0'
 
+sourceCompatibility = 21
+targetCompatibility = 21
+
 repositories {
     mavenCentral()
     maven {
