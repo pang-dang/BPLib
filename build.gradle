@@ -1,5 +1,8 @@
-apply plugin: 'java'
-apply plugin: 'maven-publish'
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
 
 group = 'kr.butterpl.bplib'
 version = '1.0'
@@ -35,6 +38,11 @@ java {
 }
 
 publishing {
+    repositories {
+        maven {
+            url = uri("https://github.com/pang-dang/BPLib")
+        }
+    }
     publications {
         maven(MavenPublication) {
             from components.java
