@@ -6,9 +6,9 @@ plugins {
 
 group = 'kr.butterpl.bplib'
 version = '1.0'
-
-sourceCompatibility = 21
-targetCompatibility = 21
+//
+//sourceCompatibility = 21
+//targetCompatibility = 21
 
 repositories {
     mavenCentral()
@@ -32,29 +32,20 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = "kr.butterpl.bplib"
-            artifactId = "BPLib"
-            version = "${project.version}"
-
+            groupId = 'kr.butterpl.bplib'
+            artifactId = 'bplib'
+            version = '1.0.0'
             from components.java
         }
     }
-    repositories {
-        mavenLocal()
-    }
 }
 
-wrapper {
-    gradleVersion = "8.5"
-    distributionType = Wrapper.DistributionType.ALL
-}
-
-build.dependsOn publishToMavenLocal
+//wrapper {
+//    gradleVersion = "8.5"
+//    distributionType = Wrapper.DistributionType.ALL
+//}
+//
+//build.dependsOn publishToMavenLocal
